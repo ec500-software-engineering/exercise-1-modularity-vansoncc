@@ -225,9 +225,37 @@ class outputAlert:
 * Alert: When the Prediction Trends are going abnormal, it will display a prediction alert.
 
 
-### Query the Data From DB:
-* Extract the patient data from database and separate as three group: Pulse, Blood Oxygen and Blood Pressure. Return these data.
-
 ### AI Prediction Module:
 * Input three groups data into the AI module to do the prediction. The Module will give the prediction feedback( like the blood pressure will decrease and become worse)
 * Also we set up the Alert value, once one of these three values under or upper a danger value, it will give an alert. 
+
+
+## Main
+### Introduce:
+* The main is combination of all these module: Input, Analyze, Database, AI Module and Output.
+### The input Module:
+*Input is dictonary format and it will randon genere some data
+```
+dic = {"ID": 1, "age": 22, "gender": 'Male', "heartrate": random.randint(50, 100),
+           "Diastolic_BP": random.randint(40, 110), "Systolic_BP": random.randint(70, 160),
+           "blood_oxygen": random.randint(50, 100),
+           "temperature": random.randint(34, 39), "time": time.ctime()}
+```
+### The Analyze module:
+* The Analyze module will accpet the date from input and go through a list of tests. If one of these data over or lower the normal value, it will give a alert feedback to the output module.
+
+### The Database module:
+* It Implement Search, Insert and delect function
+
+### AI module:
+* the AI module is use the data go through the AI calculation(we just calculate the average values in here...not real AI)
+* If one of these prediction data over or lower the normal value, it will give a alert feedback to the output module.
+
+### Output module:
+* It accpet the alert from Analyze and AI module and print out the data and Alert statu.
+
+### Asynchronous ：
+* For runing this program asynchronous, I used the multithreading
+
+### Result:
+![image](https://github.com/vansoncc/EC500-Modular-design-2.4/blob/master/WechatIMG3.png)
