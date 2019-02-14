@@ -17,8 +17,8 @@ class AI_module:
         Systolic = list()
         Diastolic = list()
         heartrate = list()
-        ID = self.ID
-        p = DataBaseModule()
+        # ID = self.ID
+        # p = DataBaseModule()
         # get dictionary from database
         for key in self._dict:
             # if key== ID:

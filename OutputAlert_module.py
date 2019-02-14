@@ -30,25 +30,25 @@ def receive_basic_iuput_data(
         "Predict_Shock_Alert": False,
         "Predict_Oxygen_Alert": False,
     }
-    if Singal_Loss == True:
+    if Singal_Loss is True:
         BasicResult["Signal Loss"] = True
-    if Shock_Alert == True:
+    if Shock_Alert is True:
         BasicResult["Shock_Alert"] = True
-    if Oxygen_Supply == True:
+    if Oxygen_Supply is True:
         BasicResult["Oxygen_Supply"] = True
-    if Fever == True:
+    if Fever is True:
         BasicResult["Fever"] = True
-    if Hypotension == True:
+    if Hypotension is True:
         BasicResult["Hypotension"] = True
-    if Hypertension == True:
+    if Hypertension is True:
         BasicResult["Hypertension"] = True
-    if Predict_Shock_Alert == True:
+    if Predict_Shock_Alert is True:
         PredictResult["Predict_Shock_Alert"] = True
-    if Predict_Oxygen_Alert == True:
+    if Predict_Oxygen_Alert is True:
         PredictResult["Predict_Oxygen_Alert"] = True
-    if Predict_Hypotension_Alert == True:
+    if Predict_Hypotension_Alert is True:
         PredictResult["Predict_Hypotension_Alert"] = True
-    if Predict_Hypertension_Alert == True:
+    if Predict_Hypertension_Alert is True:
         PredictResult["Predict_Hypertension_Alert"] = True
     print("Test and Predict Result:")
     print(BasicResult)
